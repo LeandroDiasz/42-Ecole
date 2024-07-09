@@ -14,5 +14,5 @@ Feel free to explore and review the projects. Comments and feedback are always a
 To get started with these projects, clone the repository to your local machine:
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/LeandroDiasz/42-Ecole.git
 cd Ecole-42-Projects
