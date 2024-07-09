@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/09 01:17:48 by root              #+#    #+#             */
-/*   Updated: 2024/07/09 13:29:06 by marvin           ###   ########.fr       */
+/*   Created: 2024/07/09 14:26:17 by root              #+#    #+#             */
+/*   Updated: 2024/07/09 14:38:58 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void    ft_putstr(char *str)
 {
-	write(1,&c, 1);
+    int     i;
+    
+    i = 0;
+    while (str[i])
+        i++;
+    write(1, str, i);
 }
 
-/*int		main(void)
+/*int     main(void)
 {
-	ft_putchar('a');
+    char    str[] = "string copiado";
+    ft_putstr(str);
+    return (0);
 }*/

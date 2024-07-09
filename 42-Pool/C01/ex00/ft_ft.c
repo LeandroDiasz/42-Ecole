@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/09 01:17:48 by root              #+#    #+#             */
-/*   Updated: 2024/07/09 13:29:06 by marvin           ###   ########.fr       */
+/*   Created: 2024/07/09 14:04:02 by root              #+#    #+#             */
+/*   Updated: 2024/07/09 14:11:01 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+void    ft_ft(int *nbr)
 {
-	write(1,&c, 1);
+    *nbr = 42;
 }
 
-/*int		main(void)
+/*int     main(void)
 {
-	ft_putchar('a');
+    #include <stdio.h>
+    
+    int     nbr;
+    nbr = 21;
+    ft_ft(&nbr);
+    printf("novo valor da variável: %i\n",nbr);
+    return (0);
 }*/
