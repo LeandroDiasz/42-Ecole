@@ -6,7 +6,7 @@
 /*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 01:26:25 by root              #+#    #+#             */
-/*   Updated: 2024/07/09 01:27:02 by root             ###   ########.fr       */
+/*   Updated: 2024/07/09 01:30:10 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void    ft_print_reverse_alphabet(void)
     }
 }
 
-int     main(void)
+/*int     main(void)
 {
     ft_print_reverse_alphabet();
-}
+}*\
