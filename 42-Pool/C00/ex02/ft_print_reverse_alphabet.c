@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/09 01:24:54 by root              #+#    #+#             */
-/*   Updated: 2024/07/09 01:25:44 by root             ###   ########.fr       */
+/*   Created: 2024/07/09 01:26:25 by root              #+#    #+#             */
+/*   Updated: 2024/07/09 01:27:02 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,18 @@ void	ft_putchar(char c)
 	write(1,&c, 1);
 }
 
-void    ft_print_alphabet(void)
+void    ft_print_reverse_alphabet(void)
 {
     char    alpha;
-    alpha = 'a';
-    while(alpha <= 'z')
+    alpha = 'z';
+    while(alpha >= 'a')
     {
         ft_putchar(alpha);
-        alpha++;
+        alpha--;
     }
 }
 
-/*int     main(void)
+int     main(void)
 {
-    ft_print_alphabet();
-}*\
+    ft_print_reverse_alphabet();
+}
