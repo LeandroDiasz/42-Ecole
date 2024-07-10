@@ -1,45 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/10 00:43:05 by root              #+#    #+#             */
-/*   Updated: 2024/07/10 14:57:40 by root             ###   ########.fr       */
+/*   Created: 2024/07/10 15:25:00 by root              #+#    #+#             */
+/*   Updated: 2024/07/10 16:14:15 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(char *str)
+int		ft_iterative_power(int nb, int power)
 {
-	int		i;
-	int		imp;
 	int		result;
+	int		i;
 
-	result = 0;
-	i = 0;
-	imp = 1;
-	while(str[i] == ' ' || str[i] == '\n' || str[i] == '\t'
-				|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
-				i++;
-	while (str[i] == '+' || str[i] == '-')
+	i = power;
+	result = 1;
+	if (power < 0)
+		return (0);
+	while (i > 0)
 	{
-		if (str[i] == '-')
-			imp *= -1;
-		i++;
+		result *= nb;
+		i--;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + (str[i] - 48);
-		i++;
-	}
-	return (result * imp);
+	return (result);
 }
 
 /*int		main(void)
 {
 	#include <stdio.h>
+
+	int		nb;
+	int		power;
 	
-	printf("este é o resultado: %i", ft_atoi(" ---+--+1234ab567"));
+	nb = 2;
+	power = 8;
+	
+	printf("essa é a potencia de %i elevado a %i: %i", nb, power, ft_iterative_power(nb, power));
 	return (0);
 }*/

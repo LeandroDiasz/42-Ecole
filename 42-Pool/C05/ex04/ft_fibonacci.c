@@ -1,45 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/10 00:43:05 by root              #+#    #+#             */
-/*   Updated: 2024/07/10 14:57:40 by root             ###   ########.fr       */
+/*   Created: 2024/07/10 15:25:07 by root              #+#    #+#             */
+/*   Updated: 2024/07/10 18:09:36 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(char *str)
+int		ft_fibonacci(int index)
 {
-	int		i;
-	int		imp;
 	int		result;
 
 	result = 0;
-	i = 0;
-	imp = 1;
-	while(str[i] == ' ' || str[i] == '\n' || str[i] == '\t'
-				|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
-				i++;
-	while (str[i] == '+' || str[i] == '-')
-	{
-		if (str[i] == '-')
-			imp *= -1;
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + (str[i] - 48);
-		i++;
-	}
-	return (result * imp);
+	if (index < 0)
+		return (-1);
+	if (index == 0)
+		return (1);
+	if (index > 0)
+		result = ft_fibonacci(index - 1) + ft_fibonacci(index - 2);
+	return (result);
 }
 
 /*int		main(void)
 {
 	#include <stdio.h>
-	
-	printf("este é o resultado: %i", ft_atoi(" ---+--+1234ab567"));
+
+	printf("este é o resultado:%i", ft_fibonacci(5));
 	return (0);
 }*/
