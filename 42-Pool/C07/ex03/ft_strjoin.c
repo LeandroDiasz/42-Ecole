@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/10 18:18:09 by root              #+#    #+#             */
+/*   Updated: 2024/07/10 18:19:56 by root             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 
 int	ft_strlen(char *src)
@@ -76,3 +88,25 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	}
 	return (ptr);
 }
+
+/*int		main(void) 
+{
+	#include <stdio.h>
+	
+	char *strs[] = {"testando", "o", "codigo", ":)"};
+	char *sep = "  ";
+	int size = 3;
+	char *result;
+	
+	result = ft_strjoin(size, strs, sep);
+	if (result != NULL) 
+	{
+		printf("Resultado: %s\n", result);
+		free(result);
+	} 
+	else 
+	{
+		printf("Erro ao alocar memória\n");
+	}
+	return 0;
+}*/
